@@ -13,13 +13,17 @@
 
 <html>
     <head>
-    <title>Book Shop Online  -  Master2D</title>
+    <title>D&D Store</title>
     <meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <!-- Font awesome-->
-    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Font  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
 
     <script type="text/javascript" src="scripts/jquery-1.4.1.js"></script>
 	<script type="text/javascript" src="scripts/basic.js"></script>
@@ -29,7 +33,11 @@
     </head>
 
     <body>
-        <!-- Khu vuc header -->
+        <!-- <header class="header">
+            <div class="header-1">
+                <a href="#!" class="logo"></a>
+            </div>
+        </header> -->
         <div class="header-area">
             <div class="container">
                 <div class="user-menu">
@@ -41,7 +49,6 @@
             </div>
         </div> 
 
-        <!-- Khu vuc site branding -->
         <div class="site-branding-area">
             <div class="container">
                 <div class="row">
@@ -57,8 +64,7 @@
                 </div>
             </div>
         </div>
-
-         <!-- Khu vuc main menu -->
+      
         <div class="main-menu-area">
             <div class="container">
                 <div class="row">

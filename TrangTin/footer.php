@@ -4,7 +4,8 @@
             height: 380px;
             padding: 10px 0; 
             background: #2e2100;
-              color: #bfbcb2;
+            color: #bfbcb2;
+            clear: both;
         }
         h2{
             color: #fff;
@@ -18,7 +19,7 @@
         }
 
         .footer  .row {
-            width: 50%;  
+            width: 40%;  
         }
 
         .footer .socials {
@@ -56,7 +57,7 @@
 
         .form input[type="email"] {
             padding: 10px 15px;
-            width: 300px; 
+            width: 200px; 
             border-radius: 5px;
             border: 2px solid #bfbcb2; 
             outline: none; 

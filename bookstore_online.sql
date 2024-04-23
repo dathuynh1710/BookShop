@@ -73,16 +73,16 @@ CREATE TABLE `sach` (
 --
 
 INSERT INTO `sach` (`IDSach`, `TenSach`, `MoTa`, `NamXB`, `KichThuoc`, `SoTrang`, `HinhAnh`, `DonGia`, `SoLuong`, `IDTheLoai`, `IDTacGia`, `IDNhaXuatBan`) VALUES
-(1, 'Your Name', 'Truyện ngắn', 2016, '130 x 176', 288, '/assets/img/books/your-name.jpg', 60000, 100, 6, 4, 3),
-(2, 'Naruto tập 72', 'Truyện ngắn', 2021, '117 x 176', 288, '/assets/img/books/naruto-vol-72.jpg', 22000, 100, 6, 12, 3),
-(3, 'One Punch Man Tập 1', 'Truyện ngắn', 2018, '117 x 176', 184, '/assets/img/books/opm-1.jpg', 18000, 100, 6, 9, 1),
-(4, 'One Punch Man Tập 9', 'Truyện ngắn', 2018, '117 x 176', 184, '/assets/img/books/opm-9.jpg', 18000, 100, 6, 9, 1),
-(5, 'Death Note Tập 1', 'Truyện ngắn', 2020, '117 x 176', 184, '/assets/img/books/death-note-1.jpg', 35000, 100, 6, 11, 1),
-(6, 'Chú Thuật Hồi Chiến Tập 0', 'Truyện ngắn', 2021, '117 x 176', 184, '/assets/img/books/chut-thuat-hoi-chien-0.jpg', 30000, 100, 6, 10, 1),
-(7, 'Chú Thuật Hồi Chiến Tập 2', 'Truyện ngắn', 2021, '117 x 176', 184, '/assets/img/books/chu-thuat-hoi-chien-2.jpg', 30000, 100, 6, 10, 1),
-(8, 'Doraemon dài - Tập 14: Nobita và ba chàng hiệp sĩ mộng mơ', 'Truyện dài', 2021, '130 x 190', 189, '/assets/img/books/doraemon-vol-14.jpg', 18000, 100, 6, 13, 1),
-(9, 'Thám Tử Lừng Danh Conan - Tập 99', 'Truyện ngắn', 2022, '176 x 113', 184, '/assets/img/books/conan-tap-99.jpg', 20000, 100, 6, 1, 1),
-(10, 'Chú Thuật Hồi Chiến Tập 1', 'Truyện ngắn', 2022, '117 x 176', 184, '/assets/img/books/chu-thuat-hoi-chien-tap-1.jpg', 30000, 100, 6, 10, 1);
+(1, 'Your Name', 'Truyện ngắn', 2016, '130 x 176', 288, 'images/your-name.jpg', 60000, 100, 6, 4, 3),
+(2, 'Naruto tập 72', 'Truyện ngắn', 2021, '117 x 176', 288, 'images/naruto-vol-72.jpg', 22000, 100, 6, 12, 3),
+(3, 'One Punch Man Tập 1', 'Truyện ngắn', 2018, '117 x 176', 184, 'images/opm-1.jpg', 18000, 100, 6, 9, 1),
+(4, 'One Punch Man Tập 9', 'Truyện ngắn', 2018, '117 x 176', 184, 'images/opm-9.jpg', 18000, 100, 6, 9, 1),
+(5, 'Death Note Tập 1', 'Truyện ngắn', 2020, '117 x 176', 184, 'images/death-note-1.jpg', 35000, 100, 6, 11, 1),
+(6, 'Chú Thuật Hồi Chiến Tập 0', 'Truyện ngắn', 2021, '117 x 176', 184, 'images/chut-thuat-hoi-chien-0.jpg', 30000, 100, 6, 10, 1),
+(7, 'Chú Thuật Hồi Chiến Tập 2', 'Truyện ngắn', 2021, '117 x 176', 184, 'images/chu-thuat-hoi-chien-2.jpg', 30000, 100, 6, 10, 1),
+(8, 'Doraemon dài - Tập 14: Nobita và ba chàng hiệp sĩ mộng mơ', 'Truyện dài', 2021, '130 x 190', 189, 'images/doraemon-vol-14.jpg', 18000, 100, 6, 13, 1),
+(9, 'Thám Tử Lừng Danh Conan - Tập 99', 'Truyện ngắn', 2022, '176 x 113', 184, 'images/conan-tap-99.jpg', 20000, 100, 6, 1, 1),
+(10, 'Chú Thuật Hồi Chiến Tập 1', 'Truyện ngắn', 2022, '117 x 176', 184, 'images/chu-thuat-hoi-chien-tap-1.jpg', 30000, 100, 6, 10, 1);
 
 -- --------------------------------------------------------
 

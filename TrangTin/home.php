@@ -36,6 +36,16 @@
 			margin-top: 40px;
 			margin-left: 25px;
 		}
+
+		.hinhanhphim{
+			object-fit: cover;
+		}
+
+		.name-book{
+			display: block;
+			text-align: center;
+			color: #363636;
+		}
 	</style>
 	<body>
 
@@ -51,45 +61,42 @@
 		$limit_home_ok =  $_SESSION['limit_home'];
 		
 		
-	$sql = "select t.IdSanPham, t.TenSanPham, t.IdNhaSanXuat, t.HinhAnh, t.DonGia, t.SoLuong, t.MoTa, t.CauHinh, t.TiLeGiamGia, t.LuotXem, l.IdNhaSanXuat, l.TenNhaSanXuat
-	from (tbl_nhasanxuat l inner join tbl_sanpham t on t.IdNhaSanXuat=l.IdNhaSanXuat)
-	order by LuotXem DESC Limit 0,".$limit_home_ok;		
-		
+		$sql = "select s.IDSach, s.TenSach, s.MoTa, s.NamXB, s.KichThuoc, s.SoTrang,s.HinhAnh, s.DonGia, s.SoLuong,t.IDTheLoai, t.TenTheLoai
+		from (sach s inner join theloai t on s.IDTheLoai = t.IDTheLoai)
+		order by s.IDSach Limit 0,".$limit_home_ok;		
+			  
 		$danhsach = $connect->query($sql);
-		//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+
 		if (!$danhsach) {
 			die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
-			exit();
+		    exit();
 		}
-		
-		$sql1 = "select * from (tbl_nhasanxuat l inner join tbl_sanpham t on t.IdNhaSanXuat=l.IdNhaSanXuat)";
+			  
+		$sql1 = "select * from (theloai t inner join sach s on t.IDTheLoai=s.IDTheLoai)";
 		$danhsach2 = $connect->query($sql1);
 		$count_kq = mysqli_num_rows($danhsach2);
-		
-		
+			  	  
 		while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
-		{				
-			$giaban = $row['DonGia'] - (($row['TiLeGiamGia'] /100) * $row['DonGia']);
-			echo "<div class='inner'  >";
-				echo "<div class='khungsanpham'>";
-					echo "<div class='card'>";					
-						echo "<a href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>";
-							echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . "  style='width: 190px; height: 140px;'>";
-							echo "<span class='tenphim' ></span> <br />";
-						echo "</a>";
-						echo "<span class=\"luotxem\">". $row['LuotXem'] ." lượt xem </span><span class=\"giaban\">". number_format($giaban)." đ</span>";
-						echo "<br /><span class=\"luotxem\"></span><span class=\"dongia\">". number_format($row['DonGia'])." đ</span>";
-					echo "</div>";
-					echo "<p><a  href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>" . $row['TenSanPham'] . "</a></p>";
-				echo "</div>";
-			echo "</div>";
-		}
+			  {				
+				echo "<div class='inner'  >";
+				  echo "<div class='khungsanpham'>";
+					  echo "<div class='card'>";					
+						  echo "<a href='#!'>";
+							  echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . "  style='width: 190px; height: 140px;'>";
+							  echo "<span class='tenphim' ></span> <br />";
+						  echo "</a>";
+						  
+						  echo "<br /><span class=\"dongia\">". number_format($row['DonGia'])." đ</span>";
+					  echo "</div>";
+					  echo "<p><a class='name-book' href='index.php?do=sanpham_chitiet&id_sp=" . $row['IDSach'] . "&id_nsx=" . $row['IDTheLoai'] . "'>" . $row['TenSach'] . "</a></p>";
+					  
+				  echo "</div>";
+				  echo "</div>";
+			  }
 
 		if($count_kq > $_SESSION['limit_home'])
 		{
-			// echo "<h3 class=\"xemthem\"><a href='index.php?do=home&limit_home=ok'>Xem thêm các sản phẩm khác</a></h3></td>";
 			echo "<td><button class=\"xemthem\"><a href='index.php?do=home&limit_home=ok'>Xem thêm </a></button></td>";
-
 		}
 ?>
 

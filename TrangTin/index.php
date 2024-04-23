@@ -70,15 +70,12 @@
 						</tr>
 					</table>
 				
-				
 					<?php
 						
 						$do = isset($_GET['do']) ? $_GET['do'] : "home";
 						
 						include $do . ".php";
 					?>
-					
-					
 				</div>
 
 				<div id="BenPhai" >

@@ -260,20 +260,10 @@ span.luotxem {
     font-size: 16px;
 }
 span.dongia {
-    color: #ff0000;
+    color: #0c75f3;
     font-size: 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    background: yellow;
-    text-decoration: line-through;
 }
-span.giaban {
-    color: #ff0000;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    background: yellow;
-}
+
 #binhchon {
     color: #ff0000;
     font-size: 16pt;
@@ -319,7 +309,6 @@ p.requirefields {
     height: 30px;
     line-height: 40px;
     border-bottom: 1px solid #e8e8e8;
-
     padding: 0 1em;
 }
 
@@ -414,21 +403,21 @@ ul#thumbs img {
 .card {
     width: 234px;
     height: 200px;
-
     margin: 8px;
     padding: auto;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    transition: transform 0.3s;
+    /* transition: transform 0.3s; */
     text-align: center;
-    border: 1px solid red;
     float: left;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    background: #fffaf0;
+    cursor: pointer;
 }
+
 .card-link {
     text-decoration: none;
 }

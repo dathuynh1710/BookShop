@@ -3,10 +3,42 @@
 	<head>
 		<title>Trang Tin Điện Tử</title>
 		<meta charset="utf-8" />
+	
 	</head>
+	<style>
+		.xemthem {
+			background-color: transparent; 
+			border: none;
+			padding: 0;
+			display: inline-block;
+			cursor: pointer;
+			margin: 0 auto;
+			width: 90%;
+		}
+
+		.xemthem a {
+			margin: 10px;
+			font-size: 15px;
+			color: #eb7c26; 
+			font-weight: bold;
+			border: 1px solid #eb7c26;
+			border-radius: 5px;
+			padding: 10px 30px;
+			text-decoration: none; 
+			display: inline-block;
+		}
+
+		.xemthem a:hover{
+			background: #FFEFD5;
+		}
+
+		.inner{
+			margin-top: 40px;
+			margin-left: 25px;
+		}
+	</style>
 	<body>
-		
-		
+
 <?php
 	if(isset($_GET["limit_home"]) == true)
 		{
@@ -14,15 +46,14 @@
 		}
 		else
 		{
-			$_SESSION['limit_home'] = 12;
+			$_SESSION['limit_home'] = 9;
 		}
 		$limit_home_ok =  $_SESSION['limit_home'];
 		
 		
-
-$sql = "select t.IdSanPham, t.TenSanPham, t.IdNhaSanXuat, t.HinhAnh, t.DonGia, t.SoLuong, t.MoTa, t.CauHinh, t.TiLeGiamGia, t.LuotXem, l.IdNhaSanXuat, l.TenNhaSanXuat
-  from (tbl_nhasanxuat l inner join tbl_sanpham t on t.IdNhaSanXuat=l.IdNhaSanXuat)
-  order by LuotXem DESC Limit 0,".$limit_home_ok;		
+	$sql = "select t.IdSanPham, t.TenSanPham, t.IdNhaSanXuat, t.HinhAnh, t.DonGia, t.SoLuong, t.MoTa, t.CauHinh, t.TiLeGiamGia, t.LuotXem, l.IdNhaSanXuat, l.TenNhaSanXuat
+	from (tbl_nhasanxuat l inner join tbl_sanpham t on t.IdNhaSanXuat=l.IdNhaSanXuat)
+	order by LuotXem DESC Limit 0,".$limit_home_ok;		
 		
 		$danhsach = $connect->query($sql);
 		//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
@@ -39,25 +70,26 @@ $sql = "select t.IdSanPham, t.TenSanPham, t.IdNhaSanXuat, t.HinhAnh, t.DonGia, t
 		while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
 		{				
 			$giaban = $row['DonGia'] - (($row['TiLeGiamGia'] /100) * $row['DonGia']);
-			echo "<div class='khungsanpham'>";
-				echo "<div class='card'>";					
-					echo "<a href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>";
-						echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . "  style='width: 190px; height: 140px;'>";
-						echo "<span class='tenphim' ></span> <br />";
-					echo "</a>";
-					echo "<span class=\"luotxem\">". $row['LuotXem'] ." lượt xem </span><span class=\"giaban\">". number_format($giaban)." đ</span>";
-					echo "<br /><span class=\"luotxem\"></span><span class=\"dongia\">". number_format($row['DonGia'])." đ</span>";
+			echo "<div class='inner'  >";
+				echo "<div class='khungsanpham'>";
+					echo "<div class='card'>";					
+						echo "<a href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>";
+							echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . "  style='width: 190px; height: 140px;'>";
+							echo "<span class='tenphim' ></span> <br />";
+						echo "</a>";
+						echo "<span class=\"luotxem\">". $row['LuotXem'] ." lượt xem </span><span class=\"giaban\">". number_format($giaban)." đ</span>";
+						echo "<br /><span class=\"luotxem\"></span><span class=\"dongia\">". number_format($row['DonGia'])." đ</span>";
+					echo "</div>";
+					echo "<p><a  href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>" . $row['TenSanPham'] . "</a></p>";
 				echo "</div>";
-				echo "<p><a  href='index.php?do=sanpham_chitiet&id_sp=" . $row['IdSanPham'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>" . $row['TenSanPham'] . "</a></p>";
-				
 			echo "</div>";
-			
 		}
 
 		if($count_kq > $_SESSION['limit_home'])
 		{
-			echo "<h3 class=\"xemthem\"><a href='index.php?do=home&limit_home=ok'>Xem thêm các sản phẩm khác</a></h3></td>";
-		
+			// echo "<h3 class=\"xemthem\"><a href='index.php?do=home&limit_home=ok'>Xem thêm các sản phẩm khác</a></h3></td>";
+			echo "<td><button class=\"xemthem\"><a href='index.php?do=home&limit_home=ok'>Xem thêm </a></button></td>";
+
 		}
 ?>
 

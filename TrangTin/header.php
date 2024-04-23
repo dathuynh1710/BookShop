@@ -33,11 +33,6 @@
     </head>
 
     <body>
-        <!-- <header class="header">
-            <div class="header-1">
-                <a href="#!" class="logo"></a>
-            </div>
-        </header> -->
         <div class="header-area">
             <div class="container">
                 <div class="user-menu">

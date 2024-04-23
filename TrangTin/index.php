@@ -21,10 +21,8 @@
 		<script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
 		<script type="text/javascript" src="scripts/ckfinder/ckfinder.js"></script>
 		
-		
-		
 	</head>
-	<body onload="htGio()">
+	<body >
 		<div id="TrangWeb">
 			<div id="PhanDau">
 				<img src="images/banner_book.jpg" alt="" class="banner">
@@ -47,23 +45,20 @@
 				<div id="BenTrai">
 				<?php
 					if(!isset($_SESSION['QuyenHan']))
-						{
-							echo '<h3>Đăng Nhập</h3>';
-								echo '<ul>';
-									echo '<li><a " href="index.php?do=dangnhap">Đăng nhập</a></li>';
-									echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
-								echo '</ul>';
-						}
+					{
+						echo '<h3>Đăng Nhập</h3>';
+							echo '<ul>';
+								echo '<li><a " href="index.php?do=dangnhap">Đăng nhập</a></li>';
+								echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
+							echo '</ul>';
+					}
 				?>
-					
-					
-				
-				
-					
-								
-					
-					
-					
+
+				<div>
+						<iframe scrolling="no" frameborder="no" clocktype="html5" 
+						style="overflow:hidden;border:0;margin:0;padding:0;width:200px;height:180px;margin-top:20px;"
+						src="https://www.clocklink.com/html5embed.php?clock=042&timezone=VietNam_Hanoi&color=blue&size=356&Title=&Message=&Target=&From=2023,1,1,0,0,0&Color=blue"></iframe>					
+				</div>
 			</div>	
 				
 				<div id="Giua">
@@ -102,6 +97,5 @@
 				<?php include "footer.php" ?>
 			</div>
 		</div>
-       
 	</body>
 </html>

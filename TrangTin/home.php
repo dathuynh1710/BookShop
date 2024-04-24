@@ -33,11 +33,13 @@
 		}
 
 		.inner{
-			margin-top: 40px;
+			margin-top: 20px;
 			margin-left: 25px;
 		}
 
 		.hinhanhphim{
+			width: 236px;
+    		height: 153px;
 			object-fit: cover;
 		}
 
@@ -78,15 +80,15 @@
 			  	  
 		while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
 			  {				
-				echo "<div class='inner'  >";
+				echo "<div class='inner'>";
 				  echo "<div class='khungsanpham'>";
 					  echo "<div class='card'>";					
-						  echo "<a href='#!'>";
-							  echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . "  style='width: 190px; height: 140px;'>";
+						  echo "<a href='index.php?do=sanpham_chitiet&id_sp=" . $row['IDSach'] . "&id_nsx=" . $row['IDTheLoai']. "'>";
+							  echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . "  >";
 							  echo "<span class='tenphim' ></span> <br />";
 						  echo "</a>";
 						  
-						  echo "<br /><span class=\"dongia\">". number_format($row['DonGia'])." đ</span>";
+						  echo "<span class=\"dongia\">". number_format($row['DonGia'])." đ</span>";
 					  echo "</div>";
 					  echo "<p><a class='name-book' href='index.php?do=sanpham_chitiet&id_sp=" . $row['IDSach'] . "&id_nsx=" . $row['IDTheLoai'] . "'>" . $row['TenSach'] . "</a></p>";
 					  

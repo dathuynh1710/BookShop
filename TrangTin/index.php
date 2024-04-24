@@ -20,7 +20,22 @@
 		
 		<script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
 		<script type="text/javascript" src="scripts/ckfinder/ckfinder.js"></script>
-		
+		<style>
+			.title-giua{
+				color: #333;
+				font-size: 30px;
+				font-weight: 700;
+				line-height: 30px;
+				text-transform: uppercase;
+				margin-top: 60px;
+				text-align: center;
+			}
+
+			.title-main{
+				color: #e59285;
+			}
+
+		</style>
 	</head>
 	<body >
 		<div id="TrangWeb">
@@ -31,7 +46,7 @@
 				<a class = "menu" href="index.php?do=home">Trang chủ</a>  
 				<a class = "menu" href="#!">Cửa hàng</a>  
 				<a class = "menu" href="#!">Sách</a>  
-				<a class = "menu" href="i#!">Liên hệ</a>  
+				<a class = "menu" href="#!">Liên hệ</a>  
 			</div>
 
 			<div id="PhanMenu_2">
@@ -69,6 +84,10 @@
 							</td>
 						</tr>
 					</table>
+					
+					
+				<h2 class="title-giua" ><span class="title-main">Sản phẩm</span> mới</h2>
+
 				
 					<?php
 						

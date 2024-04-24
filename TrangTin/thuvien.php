@@ -1,7 +1,7 @@
 <?php
-	function ThongBaoLoi($thongbao = "")
+	function BaoLoi($thongbao = "")
 	{
-		echo "<h3>Lỗi</h3><p class='ThongBaoLoi'>$thongbao</p>";
+		echo "<script>alert('$thongbao');</script>";
 	}
 	
 	function ThongBao($thongbao = "")

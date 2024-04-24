@@ -1,10 +1,6 @@
 <head>
 	<style>
-		#wrapper{
-			display: none;
-		}
-
-		.title-giua{
+		#wrapper, .title-giua{
 			display: none;
 		}
 

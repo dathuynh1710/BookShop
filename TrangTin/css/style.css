@@ -107,7 +107,7 @@ h3.xemthem {
 }
 
 #Giua {
-    width: 800px;
+    width: 790px;
     float: left;
     margin-left: 5px;
 }
@@ -125,6 +125,7 @@ h3.xemthem {
     width: 190px;
     float: right;
     margin-top: 8px;
+    margin-right: 10px;
 }
 
 #BenPhai img {

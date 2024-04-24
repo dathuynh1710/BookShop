@@ -11,14 +11,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Trang Tin Điện Tử</title>
+		<title>D&D BookStore</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
 		<script type="text/javascript" src="scripts/jquery-1.4.1.js"></script>
 		<script type="text/javascript" src="scripts/basic.js"></script>
 		
-		<script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></>
 		<script type="text/javascript" src="scripts/ckfinder/ckfinder.js"></script>
 		<style>
 			.title-giua{
@@ -34,7 +34,6 @@
 			.title-main{
 				color: #e59285;
 			}
-
 		</style>
 	</head>
 	<body >
@@ -50,7 +49,7 @@
 			</div>
 
 			<div id="PhanMenu_2">
-				<form action="index.php?do=search_xuly" method="post">
+				<form action="index.php?do=search_xuly" method="post" autocomplete="off">
 					Tìm kiếm: <input type="text" name="search" />
 					<input class="search-btn" type="submit" name="ok" value="Search" />
 				</form>
@@ -62,11 +61,36 @@
 					if(!isset($_SESSION['QuyenHan']))
 					{
 						echo '<h3>Đăng Nhập</h3>';
-							echo '<ul>';
-								echo '<li><a " href="index.php?do=dangnhap">Đăng nhập</a></li>';
-								echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
-							echo '</ul>';
+						echo '<ul>';
+							echo '<li><a " href="index.php?do=dangnhap">Đăng nhập</a></li>';
+							echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
+						echo '</ul>';
 					}
+					// elseif ($_SESSION['QuyenHan'] == 1)
+					// {
+					// 	echo '<h3>Quản lý</h3>';
+					// 	echo '<ul>';						
+					// 	echo '<li><a href="index.php?do=themsp">Đăng sản phẩm mới</a></li>';
+					// 	echo '<li><a href="index.php?do=danhsachSP">Danh sách sản phẩm</a></li>';
+					// 	echo '<li><a href="index.php?do=nguoidung">Danh sách người dùng</a></li>';
+					// 	echo '</ul>';
+					// } 
+					// else {
+					// 	echo '<h3>Khách Hàng</h3>';
+					// 	echo '<ul>';						
+					// 	echo '<li><a href="index.php?do=dssanpham_khachhang&id='. $_SESSION['MaND'].'">Danh sách sản phẩm</a></li>';
+					// 	echo '<li><a href="index.php?do=giohang_xem&id='. $_SESSION['MaND'].'">Giỏ hàng</a></li>';
+					// 	echo '</ul>';
+					// }
+					// hiện menu hồ sơ cá nhân					
+					// if(isset($_SESSION['HoTen']))
+					// {
+					// 	echo '<h3>Hồ sơ cá nhân</h3>';
+					// 	echo '<ul>';						
+					// 		echo '<li><a href="index.php?do=hosocanhan">Hồ sơ cá nhân</a></li>';
+					// 		echo '<li><a href="index.php?do=doimatkhau">Đổi mật khẩu</a></li>';
+					// 	echo '</ul>';
+					// }
 				?>
 
 				<div>
@@ -84,15 +108,11 @@
 							</td>
 						</tr>
 					</table>
-					
-					
-				<h2 class="title-giua" ><span class="title-main">Sản phẩm</span> mới</h2>
 
-				
+					<h2 class="title-giua" ><span class="title-main">Sản phẩm</span> mới</h2>
+					
 					<?php
-						
 						$do = isset($_GET['do']) ? $_GET['do'] : "home";
-						
 						include $do . ".php";
 					?>
 				</div>

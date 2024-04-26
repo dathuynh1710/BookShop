@@ -110,6 +110,7 @@
 						// menu quản lý
 						echo '<h3>Quản lý</h3>';
 						echo '<ul>';						
+						echo '<li><a href="index.php?do=theloai">Danh sách thể loại</a></li>';
 						echo '<li><a href="index.php?do=themsp">Đăng sản phẩm mới</a></li>';
 						echo '<li><a href="index.php?do=danhsachSP">Danh sách sản phẩm</a></li>';
 						echo '<li><a href="index.php?do=nguoidung">Danh sách người dùng</a></li>';

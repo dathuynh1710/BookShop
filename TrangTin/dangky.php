@@ -7,8 +7,8 @@
       <input type="text" id="TenDangNhap" name="TenDangNhap" required  placeholder="Tên đăng nhập">
       <input type="password" id="MatKhau" name="MatKhau" required  placeholder="Mật khẩu">
       <input type="password"  id="XacNhanMatKhau" name="XacNhanMatKhau" required  placeholder="Xác Nhận Mật Khẩu">
-	  <input type="text" id="DiaChi" name="DiaChi" required  placeholder="Địa Chỉ">
-	  <input type="text" id="SDT" name="SDT" required  placeholder="Số điện thoại">
+	   <input type="text" id="DiaChi" name="DiaChi" required  placeholder="Địa Chỉ">
+	   <input type="text" id="SDT" name="SDT" required  placeholder="Số điện thoại">
       <input type="submit" name="submit" value="register now" class="form-btn">
       <p>already have an account? <a href="dangnhap.php">login now</a></p>
    </form>

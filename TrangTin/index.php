@@ -1,8 +1,5 @@
 <?php
-	if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    } 
+	session_start(); 
 	
 	include_once "cauhinh.php";
 	
@@ -70,6 +67,8 @@
 				<a class = "menu" href="#!">Cửa hàng</a>  
 				<a class = "menu" href="#!">Sách</a>  
 				<a class = "menu" href="#!">Liên hệ</a>  
+
+						
 			</div>
 
 			<div id="PhanMenu_2">
@@ -82,39 +81,56 @@
 			<div id="PhanGiua">
 				<div id="BenTrai">
 				<?php
+					if (isset($_SESSION['QuyenHan']) && isset($_SESSION['HoTen'])) {
+						if ($_SESSION['QuyenHan'] == 1) {
+							echo '<ul>';
+							echo "Admin ".$_SESSION['HoTen']." ";
+							echo '<li><a href="index.php?do=dangxuat">Đăng xuất</a></li>';
+							echo '</ul>';
+						} else {
+							echo '<ul>';
+							echo "Xin chào " .strtoupper($_SESSION['HoTen'])." ";
+							echo '<li><a href="index.php?do=dangxuat">Đăng xuất</a></li>';
+							echo '</ul>';
+						}
+					}
+				?>	
+				<?php
+					//hiện menu quản lý
 					if(!isset($_SESSION['QuyenHan']))
 					{
 						echo '<h3>Đăng Nhập</h3>';
-						echo '<ul>';
-							echo '<li><a " href="index.php?do=dangnhap">Đăng nhập</a></li>';
-							echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
+							echo '<ul>';
+								echo '<li><a " href="index.php?do=dangnhap">Đăng nhập</a></li>';
+								echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
+							echo '</ul>';
+					}
+					elseif ($_SESSION['QuyenHan'] == 1)
+					{
+						// menu quản lý
+						echo '<h3>Quản lý</h3>';
+						echo '<ul>';						
+						echo '<li><a href="index.php?do=themsp">Đăng sản phẩm mới</a></li>';
+						echo '<li><a href="index.php?do=danhsachSP">Danh sách sản phẩm</a></li>';
+						echo '<li><a href="index.php?do=nguoidung">Danh sách người dùng</a></li>';
+						echo '</ul>';
+					} else {
+						// menu khách hàng
+						echo '<h3>Khách Hàng</h3>';
+						echo '<ul>';						
+						echo '<li><a href="index.php?do=dssanpham_khachhang&id='. $_SESSION['MaND'].'">Danh sách sản phẩm</a></li>';
+						echo '<li><a href="index.php?do=giohang_xem&id='. $_SESSION['MaND'].'">Giỏ hàng</a></li>';
 						echo '</ul>';
 					}
-					// elseif ($_SESSION['QuyenHan'] == 1)
-					// {
-					// 	echo '<h3>Quản lý</h3>';
-					// 	echo '<ul>';						
-					// 	echo '<li><a href="index.php?do=themsp">Đăng sản phẩm mới</a></li>';
-					// 	echo '<li><a href="index.php?do=danhsachSP">Danh sách sản phẩm</a></li>';
-					// 	echo '<li><a href="index.php?do=nguoidung">Danh sách người dùng</a></li>';
-					// 	echo '</ul>';
-					// } 
-					// else {
-					// 	echo '<h3>Khách Hàng</h3>';
-					// 	echo '<ul>';						
-					// 	echo '<li><a href="index.php?do=dssanpham_khachhang&id='. $_SESSION['MaND'].'">Danh sách sản phẩm</a></li>';
-					// 	echo '<li><a href="index.php?do=giohang_xem&id='. $_SESSION['MaND'].'">Giỏ hàng</a></li>';
-					// 	echo '</ul>';
-					// }
-					// hiện menu hồ sơ cá nhân					
-					// if(isset($_SESSION['HoTen']))
-					// {
-					// 	echo '<h3>Hồ sơ cá nhân</h3>';
-					// 	echo '<ul>';						
-					// 		echo '<li><a href="index.php?do=hosocanhan">Hồ sơ cá nhân</a></li>';
-					// 		echo '<li><a href="index.php?do=doimatkhau">Đổi mật khẩu</a></li>';
-					// 	echo '</ul>';
-					// }
+					//hiện menu hồ sơ cá nhân					
+					if(isset($_SESSION['HoTen']))
+					{
+						echo '<h3>Hồ sơ cá nhân</h3>';
+						echo '<ul>';						
+							echo '<li><a href="index.php?do=hosocanhan">Hồ sơ cá nhân</a></li>';
+							echo '<li><a href="index.php?do=doimatkhau">Đổi mật khẩu</a></li>';
+						echo '</ul>';
+					}
 				?>
 
 				<div>
@@ -125,19 +141,13 @@
 			</div>	
 				
 				<div id="Giua">
-					<table  border="0" cellspacing="0" width="750" align="center" valign="top">
-						<tr>
-							<td>
-								<?php include 'jquery.php'; ?>
-							</td>
-						</tr>
-					</table>
-
-					<h2 class="title-giua" ><span class="title-main">Sản phẩm</span> mới</h2>
-					
 					<?php
 						$do = isset($_GET['do']) ? $_GET['do'] : "home";
-						include $do . ".php";
+						if ($do === 'dangnhap') {
+							include 'dangnhap.php';
+						} else {
+							include $do . ".php";
+						}
 					?>
 				</div>
 

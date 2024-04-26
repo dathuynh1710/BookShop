@@ -146,24 +146,25 @@ INSERT INTO `theloai` (`IDTheLoai`, `TenTheLoai`) VALUES
 --
 
 CREATE TABLE `users` (
-  `MaNguoiDung` int(10) NOT NULL,
+  `MaNguoiDung` int(20) NOT NULL AUTO_INCREMENT,
   `TenNguoiDung` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `TenDangNhap` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `MatKhau` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `QuyenHan` tinyint(1) NOT NULL,
   `DiaChi` text COLLATE utf8_unicode_ci NOT NULL,
-  `SDT` varchar(50) NOT NULL
+  `SDT` varchar(50) NOT NULL,
+  Primary key(`MaNguoiDung`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`MaNguoiDung`, `TenNguoiDung`, `TenDangNhap`, `MatKhau`, `QuyenHan`, `DiaChi`,`SDT`) VALUES
-(1, 'Trần Văn A', 'tva', 'e10adc3949ba59abbe56e057f20f883e', 1, 'An Giang','0236498752'),
-(2, 'Nguyễn Văn Hùng', 'nvhung', 'e10adc3949ba59abbe56e057f20f883e 	', 1, 'Cần Thơ','0986498752'),
-(3, 'Nguyễn Thị D', 'ntd', 'e10adc3949ba59abbe56e057f20f883e', 2, 'Cà Mau','0336498752'),
-(4, 'Trần Văn C', 'tvc123456', 'e10adc3949ba59abbe56e057f20f883e', 2, 'Kiên Giang','0952987522');
+INSERT INTO `users` (`TenNguoiDung`, `TenDangNhap`, `MatKhau`, `QuyenHan`, `DiaChi`,`SDT`) VALUES
+('Trần Văn A', 'tva', 'e10adc3949ba59abbe56e057f20f883e', 1, 'An Giang','0236498752'),
+('Nguyễn Văn Hùng', 'nvhung', 'e10adc3949ba59abbe56e057f20f883e 	', 1, 'Cần Thơ','0986498752'),
+('Nguyễn Thị D', 'ntd', 'e10adc3949ba59abbe56e057f20f883e', 2, 'Cà Mau','0336498752'),
+('Trần Văn C', 'tvc123456', 'e10adc3949ba59abbe56e057f20f883e', 2, 'Kiên Giang','0952987522');
 
 -- --------------------------------------------------------
 

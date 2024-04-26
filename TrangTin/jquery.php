@@ -1,4 +1,4 @@
-<header>
+<head>
 	<style>
 		.slider{
 			width: 750px;
@@ -65,7 +65,7 @@
 			width: 30px;
 		}
 	</style>
-</header>
+</head>
 <body>
 	<div id='wrapper'>
 		<div class="slider">

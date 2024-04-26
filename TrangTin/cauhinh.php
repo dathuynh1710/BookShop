@@ -4,7 +4,6 @@
 	$username = "root";
 	$password = "vertrigo";
 	 $dbname = "bookstore_online";	
-	// $dbname = "shoplaptop";	
 	
 	$connect = new mysqli($servername, $username, $password, $dbname);	
 	mysqli_set_charset($connect, 'UTF8');

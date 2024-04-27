@@ -15,7 +15,7 @@ body {
 }
 
 #PhanMenu1 {
-    width: 760px;
+    width: 440px;
     height: 40px;
     color: white;
     float: left;
@@ -23,19 +23,46 @@ body {
 }
 
 #PhanMenu_2 {
-    width: 440px;
+    width: 500px;
     height: 40px;
     color: white;
-    float: right;
+    float: left;
     background: #2e2100;
 }
-a.menu {
+
+#PhanMenu3 {
+    width: 260px;
+    height: 40px;
+    color: white;
+    float: left;
+    background: #2e2100;
+}
+
+PhanMenu3 a.menu {
     display: inline-block;
     text-decoration: none;
     text-align: center;
     color: white;
     font-size: 16px;
     margin: 10px 35px;
+}
+
+.menu.menu2 {
+    display: inline-block;
+    margin: 7px 56px;
+    color: #a3d926;
+    font-size: 19px;
+}
+
+.info-login {
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+.logout {
+    display: inline-block;
+    color: green;
+    font-weight: bold;
 }
 
 a.menu:hover {

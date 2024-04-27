@@ -8,6 +8,6 @@
 	}
 	else
 	{
-		ThongBao("Đã xóa thành công NXB!!");
+		header("Location: index.php?do=nxb");
 	}
 ?>

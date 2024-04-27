@@ -16,7 +16,7 @@
 		}
 		else
 		{
-			ThongBao("Đã thêm thành công tác giả!!");
+			header("Location: index.php?do=tacgia");
 		}	
 		
 	}

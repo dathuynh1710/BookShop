@@ -17,7 +17,7 @@
 		}
 		else
 		{
-			ThongBao("Đã sửa thành công thể loại!!");
+			header("Location: index.php?do=theloai");
 		}
 	}
 ?>

@@ -36,6 +36,5 @@
 		}
 	?>
 </table>
-	
 <a href="index.php?do=theloai_them">Thêm mới thể loại</a>
 </form>

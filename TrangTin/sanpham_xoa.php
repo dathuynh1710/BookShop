@@ -11,7 +11,7 @@
 	}
 	else
 	{
-		ThongBao("Đã xóa thành công sản phẩm!!");
+		header("Location: index.php?do=sanpham");
 	}	
 	
 ?>

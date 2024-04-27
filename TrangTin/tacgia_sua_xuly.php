@@ -18,7 +18,7 @@
 		}
 		else
 		{
-			ThongBao("Đã sửa thành công tác giả!!");
+			header("Location: index.php?do=tacgia");
 		}
 	}
 ?>

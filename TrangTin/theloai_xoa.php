@@ -8,6 +8,6 @@
 	}
 	else
 	{
-		ThongBao("Đã xóa thành công thể loại!!");
+		header("Location: index.php?do=theloai");
 	}
 ?>

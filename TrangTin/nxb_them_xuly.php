@@ -18,7 +18,7 @@
 		}
 		else
 		{
-			ThongBao("Đã thêm thành công NXB!!");
+			header("Location: index.php?do=nxb");
 		}	
 		
 	}

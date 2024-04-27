@@ -10,13 +10,8 @@
 		}
 		
 		if($danhsach)
-			ThongBao("Cấp quyền thành công!!");
+			header("Location: index.php?do=nguoidung");
 		else
 			BaoLoi(mysql_error());
-	}
-	
-	else
-	{
-		header("Location: index.php?do=nguoidung");
 	}
 ?>

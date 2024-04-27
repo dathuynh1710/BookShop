@@ -7,6 +7,10 @@
 		#Giua{
 			width: 990px;
 		}
+
+		.quyenhan{
+			color: #333;
+		}
 	</style>
 </head>
 <?php
@@ -41,9 +45,9 @@
 				
 				echo "<td>";
 					if($dong["QuyenHan"] == 1)
-						echo "<strong color='red'>Quản trị</strong> (<a href='index.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=2'>Hạ quyền</a>)";
+						echo "<strong color='red'>Quản trị</strong> (<a class='quyenhan' href='index.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=2'>Hạ quyền</a>)";
 					else
-						echo "Thành viên (<a href='index.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";
+						echo "Thành viên (<a class='quyenhan' href='index.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";
 				echo "</td>";
 				
 				echo "<td align='center'><a href='index.php?do=nguoidung_sua&id=" . $dong["MaNguoiDung"] . "'><img src='images/edit.png' /></a></td>";

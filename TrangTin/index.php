@@ -113,8 +113,8 @@
 						echo '<li><a href="index.php?do=theloai">Danh sách thể loại</a></li>';
 						echo '<li><a href="index.php?do=tacgia">Danh sách tác giả</a></li>';
 						echo '<li><a href="index.php?do=nxb">Danh sách NXB</a></li>';
-						echo '<li><a href="index.php?do=themsp">Đăng sản phẩm mới</a></li>';
-						echo '<li><a href="index.php?do=danhsachSP">Danh sách sản phẩm</a></li>';
+						echo '<li><a href="index.php?do=sanpham_them">Thêm sản phẩm mới</a></li>';
+						echo '<li><a href="index.php?do=sanpham">Danh sách sản phẩm</a></li>';
 						echo '<li><a href="index.php?do=nguoidung">Danh sách người dùng</a></li>';
 						echo '</ul>';
 					} else {

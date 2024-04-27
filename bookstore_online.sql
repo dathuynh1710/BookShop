@@ -1,3 +1,6 @@
+
+
+
 -- phpMyAdmin SQL Dump
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
@@ -31,10 +34,11 @@ USE `bookstore_online`;
 --
 
 CREATE TABLE `nhaxuatban` (
-  `IDNhaXuatBan` int(11) NOT NULL,
+  `IDNhaXuatBan` int(11) NOT NULL AUTO_INCREMENT,
   `TenNhaXuatBan` varchar(64) DEFAULT NULL,
   `SoDT` varchar(11) DEFAULT NULL,
-  `DiaChi` varchar(255) DEFAULT NULL
+  `DiaChi` varchar(255) DEFAULT NULL,
+  Primary key(`IDNhaXuatBan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -54,7 +58,7 @@ INSERT INTO `nhaxuatban` (`IDNhaXuatBan`, `TenNhaXuatBan`, `SoDT`, `DiaChi`) VAL
 --
 
 CREATE TABLE `sach` (
-  `IDSach` int(10) NOT NULL,
+  `IDSach` int(10) NOT NULL AUTO_INCREMENT,	
   `TenSach` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `MoTa` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `NamXB` int(11) DEFAULT NULL,
@@ -65,7 +69,8 @@ CREATE TABLE `sach` (
   `SoLuong` int(10) NOT NULL,
   `IDTheLoai` int(20) NOT NULL,
   `IDTacGia` int(11) NOT NULL,
-  `IDNhaXuatBan` int(11) DEFAULT NULL
+  `IDNhaXuatBan` int(11) DEFAULT NULL,
+  PRIMARY KEY (`IdSach`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -91,9 +96,10 @@ INSERT INTO `sach` (`IDSach`, `TenSach`, `MoTa`, `NamXB`, `KichThuoc`, `SoTrang`
 --
 
 CREATE TABLE `tacgia` (
-  `IDTacGia` int(11) NOT NULL,
+  `IDTacGia` int(11) NOT NULL AUTO_INCREMENT,
   `TenTacGia` varchar(64) DEFAULT NULL,
-  `GhiChu` text
+  `GhiChu` text,
+  Primary key(`IDTacGia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -122,8 +128,9 @@ INSERT INTO `tacgia` (`IDTacGia`, `TenTacGia`, `GhiChu`) VALUES
 --
 
 CREATE TABLE `theloai` (
-  `IDTheLoai` int(20) NOT NULL,
-  `TenTheLoai` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+  `IDTheLoai` int(20) NOT NULL AUTO_INCREMENT,
+  `TenTheLoai` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  Primary key(`IDTheLoai`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -189,14 +196,12 @@ CREATE TABLE `vouchers` (
 --
 -- Chỉ mục cho bảng `sach`
 --
-ALTER TABLE `sach`
-  ADD PRIMARY KEY (`IdSach`);
+
 
 --
 -- Chỉ mục cho bảng `theloai`
 --
-ALTER TABLE `theloai`
-  ADD PRIMARY KEY (`IDTheLoai`);
+
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
@@ -205,15 +210,11 @@ ALTER TABLE `theloai`
 --
 -- AUTO_INCREMENT cho bảng `sach`
 --
-ALTER TABLE `sach`
-  MODIFY `IdSach` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 
 --
 -- AUTO_INCREMENT cho bảng `theloai`
 --
-ALTER TABLE `theloai`
-  MODIFY `IDTheLoai` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

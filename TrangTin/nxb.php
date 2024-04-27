@@ -1,3 +1,14 @@
+<head>
+	<style>
+		#BenPhai{
+			display: none;
+		}
+
+		#Giua{
+			width: 990px;
+		}
+	</style>
+</head>
 <?php
 	$sql = "select * from`nhaxuatban` WHERE 1";
 	$danhsach = $connect->query($sql);

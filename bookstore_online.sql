@@ -174,6 +174,25 @@ INSERT INTO `users` (`TenNguoiDung`, `TenDangNhap`, `MatKhau`, `QuyenHan`, `DiaC
 ('Trần Văn C', 'tvc123456', 'e10adc3949ba59abbe56e057f20f883e', 2, 'Kiên Giang','0952987522');
 
 -- --------------------------------------------------------
+CREATE TABLE `giohang` (
+  `MaGioHang` int(11) NOT NULL AUTO_INCREMENT,
+  `MaNguoiDung` int(11) NOT NULL,
+  `MaSach` int(11) DEFAULT NULL,
+  `Ten` text COLLATE utf8_unicode_ci,
+  `SoLuong` int(11) DEFAULT NULL,
+  `Gia` int(11) DEFAULT NULL,
+  `Anh` text COLLATE utf8_unicode_ci,
+  Primary key(`MaGioHang`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `giohang`
+--
+
+INSERT INTO `giohang` (`MaGioHang`, `MaNguoiDung`, `MaSach`, `Ten`, `SoLuong`, `Gia`, `Anh`) VALUES
+(1, 4, 2, 'Naruto tập 72', 1, 22000, 'images/naruto-vol-72.jpg'),
+(2, 4, 3, 'One Punch Man Tập 1', 1, 18000, 'images/opm-1.jpg'),
+(3, 4, 9, 'Thám Tử Lừng Danh Conan - Tập 99', 1, 20000, 'images/conan-tap-99.jpg');
 
 --
 -- Cấu trúc bảng cho bảng `vouchers`

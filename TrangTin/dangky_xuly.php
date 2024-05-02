@@ -1,4 +1,6 @@
 <?php
+	// Lấy thông tin từ FORM
+	$QuyenHan = 2;
 	$HoVaTen = $_POST['HoVaTen'];
 	$TenDangNhap = $_POST['TenDangNhap'];
 	$MatKhau = $_POST['MatKhau'];
@@ -20,20 +22,30 @@
 		BaoLoi("Số điện thoại không được để trống!");
 	else
 	{
-		$sql_kiemtra = "SELECT * FROM users WHERE TenDangNhap = '$TenDangNhap'";
-		$danhsach = $connect->query($sql_kiemtra);
+		// Kiểm tra người dùng đã tồn tại chưa
+		$sql = "SELECT * FROM users WHERE TenDangNhap = '$TenDangNhap'";
+		$danhsach = $connect->query($sql);
 		
 		if($danhsach)
 		{
-			$MatKhau = md5($MatKhau);
-			$sql_them = "INSERT INTO `users` (`TenNguoiDung`, `TenDangNhap`, `MatKhau`,`QuyenHan`, `DiaChi`,`SDT`) VALUES ( '$HoVaTen', '$TenDangNhap', '$MatKhau',2, '$DiaChi', '$SDT')";
-			$themnd = $connect->query($sql_them);
-			if($themnd) {
-				ThongBao("Đăng ký thành công!. Vui lòng đăng nhập để tiếp tục mua sắm");
+			if ($danhsach->num_rows > 0) {
+				BaoLoi("Người dùng với tên đăng nhập đã được sử dụng!");
 			} else {
-				BaoLoi("Đã xảy ra lỗi khi thêm dữ liệu vào CSDL!");
-			}				
-		}else
-			ThongBao("Người dùng với tên đăng nhập đã được sử dụng!");
+				// Thêm người dùng
+				$sql_them_user = "INSERT INTO `users` (`TenNguoiDung`, `TenDangNhap`, `MatKhau`,`QuyenHan`, `DiaChi`,`SDT`)
+						VALUES ( '$HoVaTen', '$TenDangNhap', '$MatKhau','$QuyenHan', '$DiaChi', '$SDT')";
+				$them_user = $connect->query($sql_them_user);
+				
+				if($them_user) {
+					ThongBao("Đăng ký thành công!. Vui lòng tiến hành đăng nhập để tiếp tục mua sắm");
+				} else {
+					BaoLoi('Đã xảy ra lỗi khi thêm dữ liệu vào CSDL!');
+				}
+			}
 		}
+		else
+		{
+			BaoLoi("Đã xảy ra lỗi khi kiểm tra người dùng!");
+		}
+	}
 ?>

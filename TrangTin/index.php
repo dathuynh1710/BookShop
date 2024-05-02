@@ -1,5 +1,8 @@
 <?php
-	session_start(); 
+	if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 	
 	include_once "cauhinh.php";
 	
@@ -41,15 +44,32 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
+		<style>
+			.title-giua{
+				color: #333;
+				font-size: 30px;
+				font-weight: 700;
+				line-height: 30px;
+				text-transform: uppercase;
+				margin-top: 60px;
+				text-align: center;
+			}
+
+			.title-main{
+				color: #e59285;
+			}
+		</style>
 	</head>
 	<body >
 		<div id="TrangWeb">
 			<div id="PhanDau">
 				<img src="images/banner_book.jpg" alt="" class="banner">
 			</div>
-
 			<div id="PhanMenu1">
-				<a class = "menu menu2" href="index.php?do=home">Trang chủ</a>  
+				<a class = "menu" href="index.php?do=home">Trang chủ</a>  
+				<a class = "menu" href="#!">Cửa hàng</a>  
+				<a class = "menu" href="#!">Sách</a>  
+				<a class = "menu" href="index.php?do=contact">Liên hệ</a>  
 			</div>
 
 			<div id="PhanMenu_2">
@@ -59,97 +79,83 @@
 				</form>
 			</div>
 
-			<div id="PhanMenu3">
-				<?php
-					if (isset($_SESSION['QuyenHan']) && isset($_SESSION['HoTen'])) {
-						if ($_SESSION['QuyenHan'] == 1) {
-							echo '<p class="info-login" >';
-							echo "Admin ".$_SESSION['HoTen']." &nbsp;&nbsp;|| &nbsp;&nbsp;"; echo '</p>';
-							echo '<a class="logout"  style="color: green; font-weight: bold;" href="index.php?do=dangxuat">Đăng xuất</a>';
-							
-						} else {
-							echo '<p class="info-login" >';
-							echo "Xin chào " .strtoupper($_SESSION['HoTen'])." &nbsp;&nbsp;|| &nbsp;&nbsp;	";echo '</p>';
-							echo '<a class="logout" style="color: green; font-weight: bold;" href="index.php?do=dangxuat">Đăng xuất</a>';
-						}
-					}
-				?>	
-			</div>
-
 			<div id="PhanGiua">
 				<div id="BenTrai">
 				<?php
-					if(!isset($_SESSION['QuyenHan'])) //hiện menu quản lý
+					if(!isset($_SESSION['QuyenHan']))
 					{
 						echo '<h3>Đăng Nhập</h3>';
-							echo '<ul>';
-								echo '<li><a " href="index.php?do=dangnhap">Đăng nhập</a></li>';
-								echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
-							echo '</ul>';
-					}
-					elseif ($_SESSION['QuyenHan'] == 1)
-					{
-						// menu quản lý
-						echo '<h3>Quản lý</h3>';
-						echo '<ul>';						
-						echo '<li><a href="index.php?do=theloai">Danh sách thể loại</a></li>';
-						echo '<li><a href="index.php?do=tacgia">Danh sách tác giả</a></li>';
-						echo '<li><a href="index.php?do=nxb">Danh sách NXB</a></li>';
-						echo '<li><a href="index.php?do=sanpham_them">Thêm sản phẩm mới</a></li>';
-						echo '<li><a href="index.php?do=sanpham">Danh sách sản phẩm</a></li>';
-						echo '<li><a href="index.php?do=nguoidung">Danh sách người dùng</a></li>';
-						echo '</ul>';
-					} else {
-						echo '<h3>Khách Hàng</h3>';// menu khách hàng
-						echo '<ul>';						
-						echo '<li><a href="index.php?do=dssanpham_khachhang&id='. $_SESSION['MaND'].'">Danh sách sản phẩm</a></li>';
-						echo '<li><a href="index.php?do=giohang_xem&id='. $_SESSION['MaND'].'">Giỏ hàng</a></li>';
+						echo '<ul>';
+							echo '<li><a " href="index.php?do=dangnhap">Đăng nhập</a></li>';
+							echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
 						echo '</ul>';
 					}
-					if(isset($_SESSION['HoTen']))//hiện menu hồ sơ cá nhân	
-					{
-						echo '<h3>Hồ sơ cá nhân</h3>';
-						echo '<ul>';						
-							echo '<li><a href="index.php?do=hosocanhan">Hồ sơ cá nhân</a></li>';
-							echo '<li><a href="index.php?do=doimatkhau">Đổi mật khẩu</a></li>';
-						echo '</ul>';
-					}
+					// elseif ($_SESSION['QuyenHan'] == 1)
+					// {
+					// 	echo '<h3>Quản lý</h3>';
+					// 	echo '<ul>';						
+					// 	echo '<li><a href="index.php?do=themsp">Đăng sản phẩm mới</a></li>';
+					// 	echo '<li><a href="index.php?do=danhsachSP">Danh sách sản phẩm</a></li>';
+					// 	echo '<li><a href="index.php?do=nguoidung">Danh sách người dùng</a></li>';
+					// 	echo '</ul>';
+					// } 
+					// else {
+					// 	echo '<h3>Khách Hàng</h3>';
+					// 	echo '<ul>';						
+					// 	echo '<li><a href="index.php?do=dssanpham_khachhang&id='. $_SESSION['MaND'].'">Danh sách sản phẩm</a></li>';
+					// 	echo '<li><a href="index.php?do=giohang_xem&id='. $_SESSION['MaND'].'">Giỏ hàng</a></li>';
+					// 	echo '</ul>';
+					// }
+					// hiện menu hồ sơ cá nhân					
+					// if(isset($_SESSION['HoTen']))
+					// {
+					// 	echo '<h3>Hồ sơ cá nhân</h3>';
+					// 	echo '<ul>';						
+					// 		echo '<li><a href="index.php?do=hosocanhan">Hồ sơ cá nhân</a></li>';
+					// 		echo '<li><a href="index.php?do=doimatkhau">Đổi mật khẩu</a></li>';
+					// 	echo '</ul>';
+					// }
 				?>
+
 				<div>
 						<iframe scrolling="no" frameborder="no" clocktype="html5" 
 						style="overflow:hidden;border:0;margin:0;padding:0;width:200px;height:180px;margin-top:20px;"
 						src="https://www.clocklink.com/html5embed.php?clock=042&timezone=VietNam_Hanoi&color=blue&size=356&Title=&Message=&Target=&From=2023,1,1,0,0,0&Color=blue"></iframe>					
 				</div>
 			</div>	
+				
+				<div id="Giua">
+					<table  border="0" cellspacing="0" width="750" align="center" valign="top">
+						<tr>
+							<td>
+								<?php include 'jquery.php'; ?>
+							</td>
+						</tr>
+					</table>
 
-			<div id="Giua">
-				<?php
-					$do = isset($_GET['do']) ? $_GET['do'] : "home";
-					if ($do === 'dangnhap') {
-						include 'dangnhap.php';
-					} else {
+					<h2 class="title-giua" ><span class="title-main">Sản phẩm</span> mới</h2>
+					
+					<?php
+						$do = isset($_GET['do']) ? $_GET['do'] : "home";
 						include $do . ".php";
-					}
-				?>
-			</div>				
-				
-			<div id="BenPhai" >
-				<marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="down" scrollamount=7 loop="infinite" height="500px">
-					<img src="images/qc1.jpg" width="200px" height="100px" margin="0 10px"/>
-					<img src="images/qc2.jpg" width="200px" height="100px" margin="0 10px"/>
-					<img src="images/qc3.jpg" width="200px" height="100px" margin="0 10px"/>
-					<img src="images/qc4.png" width="200px" height="100px" margin="0 10px"/>
-					<img src="images/qc5.jpg" width="200px" height="100px" margin="0 10px"/>
-					<img src="images/qc6.jpg" width="200px" height="100px" margin="0 10px"/>
-					<img src="images/qc7.jpg" width="200px" height="100px" margin="0 10px"/>
-				</marquee>
-			</div>
-				
+					?>
+				</div>
+
+				<div id="BenPhai" >
+					<marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="down" scrollamount=7 loop="infinite" height="500px">
+						<img src="images/qc1.jpg" width="200px" height="100px" margin="0 10px"/>
+						<img src="images/qc2.jpg" width="200px" height="100px" margin="0 10px"/>
+						<img src="images/qc3.jpg" width="200px" height="100px" margin="0 10px"/>
+						<img src="images/qc4.png" width="200px" height="100px" margin="0 10px"/>
+						<img src="images/qc5.jpg" width="200px" height="100px" margin="0 10px"/>
+						<img src="images/qc6.jpg" width="200px" height="100px" margin="0 10px"/>
+						<img src="images/qc7.jpg" width="200px" height="100px" margin="0 10px"/>
+					</marquee>
+				</div>
 				
 			<div id="PhanCuoi">
 				<?php include "footer.php" ?>
 			</div>
-			
 		</div>
 	</body>
 </html>

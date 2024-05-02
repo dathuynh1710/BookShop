@@ -1,4 +1,4 @@
-<head >
+<header >
     <style>
          .footer {
             height: 380px;
@@ -77,7 +77,7 @@
             background-color: #e47660; 
         }
     </style>
-</head>
+</header>
 <footer class="footer">
     <div class="container">
         <div class="row">

@@ -8,7 +8,6 @@
 		BaoLoi("Mật khẩu không được bỏ trống!");
 	else
 	{
-		$MatKhau = md5($MatKhau);
 		$sql= "SELECT * FROM users WHERE TenDangNhap = '$TenDangNhap' AND MatKhau = '$MatKhau'";	
 		$danhsach = $connect->query($sql);
 		if (!$danhsach) {
@@ -31,6 +30,7 @@
 			{
 				header("Location: index.php?do=dssanpham_khachhang");
 			}	
+		
 		}
 		else
 		{

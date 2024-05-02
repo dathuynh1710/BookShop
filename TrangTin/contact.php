@@ -1,119 +1,36 @@
 <head>
+    <link rel="stylesheet" type="text/css" href="css/style_contact.css" />
+
    <style>
      #BenTrai{
-        visibility: hidden;
+        display: none;
+    }
+    
+    .title-giua{
+        display: none;
     }
 
-    #Giua{
-        visibility: hidden;
-    
+    .jquery{
+        display: none;
     }
+
+     #Giua{
+        width: 100%;
+    
+    } 
 
     #BenPhai    {
-        visibility: hidden;
+        display: none;
     }
    </style>
-</head>
+
 <body>
-    <style>
-        .row {
-            display: flex;
-        }
-        .contact__title {
-            color: #2e2e2e;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .form-left {
-            width: 700px;
-            margin-right: 30px;
-        }
-        .form-left p {
-            color: #333;
-            margin-bottom: 35px;
-        }
-        .form-left .single-form {
-            margin: 0 0 35px;
-        }
-        .form-left .single-form.space-between {
-            display: flex;
-            justify-content: space-around;
-            margin-left: -10px;
-            margin-right: -10px;
-        }
-        .form-left .single-form.space-between input {
-            margin: 0 10px;
-        }
-        .form-left .single-form input {
-            border: 1px solid #c1c1c1;
-            border-radius: 0;
-            height: 42px;
-            outline: medium none;
-            padding: 0 0px;
-            width: 100%;
-            border-bottom: 1px solid #c1c1c1;
-            border-left: 0;
-            border-right: 0;
-            border-top: 0;
-        }
-        .form-left .single-form textarea {
-            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-            border: 1px solid #c1c1c1;
-            border-bottom: 1px solid #c1c1c1;
-            border-radius: 0;
-            max-width: 100%;
-            padding: 10px;
-            height: 180px;
-            padding: 0px;
-            border-left: 0;
-            border-right: 0;
-            border-top: 0;
-            width: 100%;
-            outline: none;
-        }
-
-        .form-right p {
-            color: #333;
-            margin-bottom: 35px;
-        }
-        .form-right .single__address {
-            display: flex;
-        }
-
-        .form-right .single__address .content span {
-            color: #353535;
-            display: inline-block;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .form-right .single__address .content p {
-            color: #333;
-            font-size: 17px;
-            margin-bottom: 15px;
-        }
-        #googleMap {
-            width: 100%;
-            height: 500px;
-        }
-
-        .icon {
-            margin-right: 26px;
-            margin-bottom: 30px;
-        }
-    </style>
-</body>
-
-<section class="wn_contact_area bg--white pt--80 pb--80">
-    <div class="google__map pb--80">
-        <div class="container">
-            <div class="col-md-12">
+    <div class="container">
+            <div class="maps" style="width:100%;">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3924.627228724114!2d105.429764!3d10.3716611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a731e7546fd7b%3A0x953539cd7673d9e5!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBBbiBHaWFuZyAtIMSQSFFHIFRQSENN!5e0!3m2!1svi!2s!4v1714625510827!5m2!1svi!2s"
                     width="600"
-                    height="450"
+                    height="500"
                     style="border: 0"
                     allowfullscreen=""
                     loading="lazy"
@@ -121,9 +38,8 @@
                     id="googleMap"
                 ></iframe>
             </div>
-        </div>
     </div>
-    <div class="container">
+    <div class="container" style=" padding: 20px 0;">
         <div class="row">
             <div class="PhanTrai">
                 <div class="form-left">
@@ -168,7 +84,7 @@
                             ></textarea>
                         </div>
                         <div class="contact-btn">
-                            <!-- <button type="submit">Gửi Email</button> -->
+                            <button type="submit">Gửi Email</button>
                         </div>
                     </form>
                 </div>
@@ -183,7 +99,7 @@
                     <div class="wn__addres__wreapper">
                         <div class="single__address">
                             <img
-                                src="./place_icon.svg"
+                                src="images/place_icon.svg"
                                 alt=""
                                 width="25px"
                                 class="icon"
@@ -199,7 +115,7 @@
 
                         <div class="single__address">
                             <img
-                                src="./phone_icon.svg"
+                                src="images/phone_icon.svg"
                                 alt=""
                                 width="20px"
                                 class="icon"
@@ -212,7 +128,7 @@
 
                         <div class="single__address">
                             <img
-                                src="./email_icon.svg"
+                                src="images/email_icon.svg"
                                 alt=""
                                 width="20px"
                                 class="icon"
@@ -225,7 +141,7 @@
 
                         <div class="single__address">
                             <img
-                                src="./world_icon.svg"
+                                src="images/world_icon.svg"
                                 alt=""
                                 width="20px"
                                 class="icon"
@@ -242,4 +158,4 @@
             </div>
         </div>
     </div>
-</section>
+</body>

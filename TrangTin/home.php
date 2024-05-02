@@ -101,8 +101,6 @@
 			echo "<td><button class=\"xemthem\"><a href='index.php?do=home&limit_home=ok'>Xem thêm </a></button></td>";
 		}
 ?>
-
-
 <?php 
 	
 

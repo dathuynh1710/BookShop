@@ -72,17 +72,7 @@
 	</tr>
 	
 </table>
-<!-- <table>
-	<tr >
-		<h3>Thông tin sản phẩm</h3>
-			<p class="TomTat">Mô tả: <?php echo $dong['MoTa']; ?></p>
-			<p class="TomTat">Năm xuất bản:<?php echo $dong['NamXB']; ?> </></p>
-			<p class="TomTat">Kích thước: <?php echo $dong['KichThuoc']; ?> </p>
-			<p class="TomTat">Số trang: <?php echo $dong['SoTrang']; ?></p>
-			<p class="TomTat">Số lượng: <?php echo $dong['SoLuong']; ?></p>
-			<p class="TomTat">Thể loại: <?php echo $dong['TenTheLoai']; ?></p>
-	</tr>
-</table> -->
+
 <table>
     <tr>
         <h3>Thông tin sản phẩm</h3>

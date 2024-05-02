@@ -24,18 +24,10 @@
 
 	else
 	{	
-		$sql = "update	sach
-				SET		TenSach = '$TenSach',
-						MoTa = '$MoTa',
-						NamXB = '$NamXB',
-						KichThuoc = '$KichThuoc',
-						SoTrang = '$SoTrang',
-						DonGia = $DonGia,
-						SoLuong = $SoLuong,
-						IDTheLoai = '$IDTheLoai',
-						IDTacGia = '$IDTacGia',
-						IDNhaXuatBan = '$IDNhaXuatBan',
-				WHERE	IDSach = $IDSach";
+		$sql = "UPDATE `sach` SET `TenSach`='$TenSach',`MoTa`='$MoTa',
+		`NamXB`='$NamXB',`KichThuoc`='$KichThuoc',`SoTrang`='$SoTrang',
+		`DonGia`=$DonGia,`SoLuong`= $SoLuong,`IDTheLoai`='$IDTheLoai',`IDTacGia`='$IDTacGia',
+		`IDNhaXuatBan`='$IDNhaXuatBan' WHERE `IDSach`=$IDSach";
 		
 		$danhsach = $connect->query($sql);
 		//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát

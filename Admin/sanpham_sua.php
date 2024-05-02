@@ -1,8 +1,6 @@
 <?php
-	$IDSach = $_GET['id'];
-	
-	$sql = "select * from `sach` where IDSach = '$IDSach'";
-	
+	$sql  = "select * from `sach` where IDSach = ".$_GET['id'];
+
 	$danhsach = $connect->query($sql);
 	//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
 	if (!$danhsach) {

@@ -296,7 +296,7 @@ p.requirefields {
 
 #menudung ul {
     background: white;
-    width: 178px;
+    width: 199px;
     padding: 0;
     list-style: none;
     text-align: left;
@@ -317,12 +317,11 @@ p.requirefields {
     display: block;
 }
 #menudung li:hover {
-    font-size: 13pt;
     color: #ff0000;
 }
 #menudung ul li {
     position: relative;
-    font-size: 12pt;
+    font-size: 10pt;
 }
 
 #menudung .sub-menu {

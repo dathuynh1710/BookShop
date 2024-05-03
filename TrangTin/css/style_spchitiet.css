@@ -1,0 +1,50 @@
+#wrapper,
+.title-giua,
+.promo-area {
+    display: none;
+}
+
+.addtocart__actions {
+    width: 217px;
+}
+
+.info-sach {
+    display: block;
+    margin-right: 30px;
+}
+
+.img-sach {
+    margin: 0 20px;
+}
+
+.name-sach {
+    font-family: "Roboto", sans-serif;
+}
+
+.input-text.qty {
+    border: 1px solid #ebebeb;
+    color: #616161;
+    font-size: 14px;
+    height: 40px;
+    text-align: center;
+    width: 100px;
+    margin: 0 15px 15px 0;
+}
+
+.text-soluong {
+    margin: 0 10px 0 0;
+}
+
+.tocart {
+    display: block;
+    background: #e59285;
+    border: 0 none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+}

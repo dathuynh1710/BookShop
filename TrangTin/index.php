@@ -15,6 +15,9 @@
 		<title>D&D BookStore</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 		
 		 <!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
@@ -44,21 +47,6 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
-		<style>
-			.title-giua{
-				color: #333;
-				font-size: 30px;
-				font-weight: 700;
-				line-height: 30px;
-				text-transform: uppercase;
-				margin-top: 60px;
-				text-align: center;
-			}
-
-			.title-main{
-				color: #e59285;
-			}
-		</style>
 	</head>
 	<body >
 		<div id="TrangWeb">
@@ -67,8 +55,8 @@
 			</div>
 			<div id="PhanMenu1">
 				<a class = "menu" href="index.php?do=home">Trang chủ</a>  
-				<a class = "menu" href="#!">Cửa hàng</a>  
-				<a class = "menu" href="#!">Sách</a>  
+				<a class = "menu" href="../admin/index.php">Đăng nhập</a>  
+				<a class = "menu" href="index.php?do=sach">Sách</a>  
 				<a class = "menu" href="index.php?do=contact">Liên hệ</a>  
 			</div>
 
@@ -97,7 +85,7 @@
 							<?php
 								while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 
 								{
-    								echo "<li><a href='index.php?do=sanpham_chitiet&id_tl=" . $row['IDTheLoai'] . "'>" . $row['TenTheLoai'] . "</a></li>";   
+    								echo "<li><a href='index.php?do=sach_theloai&id_tl=" . $row['IDTheLoai'] . "'>" . $row['TenTheLoai'] . "</a></li>";   
   								}
 							?>  
 					   </ul>
@@ -132,13 +120,45 @@
 			</div>	
 				
 				<div id="Giua">
-					<table class="jquery"  border="0" cellspacing="0" width="750" align="center" valign="top">
-						<tr>
-							<td>
-								<?php include 'jquery.php'; ?>
-							</td>
-						</tr>
-					</table>
+					<div class="info-promo">
+						<table class="jquery"  border="0" cellspacing="0" width="750" align="center" valign="top">
+							<tr>
+								<td>
+									<?php include 'jquery.php'; ?>
+								</td>
+							</tr>
+						</table>
+
+						<div class="promo-area">
+							<div class="row">
+								<div class="info-1">
+									<div class="single-promo promo1">
+										<i class="fas fa-sync"></i>
+										<p>Hoàn trả 30 ngày</p>
+									</div>
+								</div>
+								<div class="info-2">
+									<div class="single-promo promo2">
+										<i class="fas fa-truck"></i>
+										<p>Miễn phí vận chuyển</p>
+									</div>
+								</div>
+								<div class="info-3">
+									<div class="single-promo promo3">
+										<i class="fas fa-lock"></i>
+										<p>Thanh toán an toàn</p>
+									</div>
+								</div>
+								<div class="info-4">
+									<div class="single-promo promo4">
+										<i class="fas fa-gift"></i>
+										<p>Quà tặng khuyến mãi</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 
 					<h2 class="title-giua" ><span class="title-main">Sản phẩm</span> mới</h2>
 					

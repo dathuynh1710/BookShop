@@ -1,24 +1,5 @@
 <head>
-	<style>
-		#wrapper, .title-giua{
-			display: none;
-		}
-
-		.info-sach{
-			display: block;
-			margin-right: 30px;
-		}
-
-		.img-sach{
-			margin: 0 20px;
-		}
-
-		.name-sach{
-			font-family: "Roboto", sans-serif;
-		}
-
-		
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/style_spchitiet.css" />
 </head>
 <?php
 	$IdSanPham = $_GET['id_sp'];
@@ -43,7 +24,7 @@
 				theloai ON sach.IDTheLoai = theloai.IDTheLoai
 			JOIN
 				tacgia ON sach.IDTacGia = tacgia.IDTacGia
-			LEFT JOIN
+			JOIN
 				nhaxuatban ON sach.IDNhaXuatBan = nhaxuatban.IDNhaXuatBan
 			AND sach.IDSach = $IdSanPham";
 
@@ -67,6 +48,11 @@
 
 			<p class="TomTat">Tác giả: <p style="color: #2489F4;font-weight: 600;"><?php echo $dong['TenTacGia']; ?></p></p>
 			<p class="TomTat" >Nhà xuất bản: </br></br><strong  ><?php echo $dong['TenNhaXuatBan']; ?></strong></p>
+			<span class="text-soluong">Số Lượng</span>
+			<input class="input-text qty" name="soluong" min="1" value="1" title="Qty" type="number">
+			<div class="addtocart__actions">
+				<a class="tocart" title="Add to Cart" href="dangnhap.php" onclick="return confirm('Bạn có muốn thêm sản phẩm <?=htmlspecialchars($dong['TenSach'], ENT_QUOTES)?> vào giỏ hàng không?')">Thêm Vào Giỏ Hàng</a>
+			</div>
 		</td>
 		
 	</tr>

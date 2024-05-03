@@ -3,53 +3,9 @@
 	<head>
 		<title>Trang Tin Điện Tử</title>
 		<meta charset="utf-8" />
-	
+		<link rel="stylesheet" type="text/css" href="css/style_khungsp.css" />
 	</head>
-	<style>
-		.xemthem {
-			background-color: transparent; 
-			border: none;
-			padding: 0;
-			display: inline-block;
-			cursor: pointer;
-			margin: 0 auto;
-			width: 90%;
-		}
-
-		.xemthem a {
-			margin: 10px;
-			font-size: 15px;
-			color: #eb7c26; 
-			font-weight: bold;
-			border: 1px solid #eb7c26;
-			border-radius: 5px;
-			padding: 10px 30px;
-			text-decoration: none; 
-			display: inline-block;
-		}
-
-		.xemthem a:hover{
-			background: #FFEFD5;
-		}
-
-		.inner{
-			margin-top: 20px;
-			margin-left: 25px;
-		}
-
-		.hinhanhphim{
-			width: 236px;
-    		height: 153px;
-			object-fit: cover;
-		}
-
-		.name-book{
-			display: block;
-			text-align: center;
-			color: #363636;
-		}
-	</style>
-	<body>
+	
 
 <?php
 	if(isset($_GET["limit_home"]) == true)

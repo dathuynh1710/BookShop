@@ -101,10 +101,10 @@ h3.xemthem {
     font-weight: bold;
 }
 
-#BenTrai ul li a:visited {
+/* #BenTrai ul li a:visited {
     text-decoration: none;
     color: #0000ff;
-}
+} */
 
 #Giua {
     width: 790px;
@@ -151,6 +151,19 @@ h3.xemthem {
     margin-top: 8px;
     margin-bottom: 0;
     text-shadow: 2px 2px 3px #00ff00;
+}
+
+.title-giua {
+    color: #333;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.title-main {
+    color: #e59285;
 }
 
 #Giua h4 {
@@ -436,4 +449,61 @@ ul#thumbs img {
 }
 .card-link {
     text-decoration: none;
+}
+
+/** Promo */
+
+.promo-area {
+    color: #fff;
+    padding: 40px 0 20px;
+}
+
+.promo-area .zigzag-bottom,
+.brands-area .zigzag-bottom {
+    background: #f4f4f4;
+}
+
+.single-promo {
+    font-size: 18px;
+    font-weight: 200;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.single-promo i {
+    font-size: 50px;
+}
+
+.single-promo:hover {
+    color: #fff;
+    background: #222;
+}
+
+.info-1,
+.info-2,
+.info-3,
+.info-4 {
+    width: 182px;
+}
+
+.promo1 {
+    background: #5a88ca;
+}
+
+.promo2 {
+    background: #ffd900;
+}
+
+.promo3 {
+    background: #fa8072;
+}
+
+.promo4 {
+    background: #4abebd;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }

@@ -10,7 +10,7 @@
         display: none;
     }
 
-    .jquery{
+    .info-promo{
         display: none;
     }
 
@@ -23,7 +23,7 @@
         display: none;
     }
    </style>
-
+</head>
 <body>
     <div class="container">
             <div class="maps" style="width:100%;">
@@ -96,7 +96,7 @@
                 <div class="form-right">
                     <h2 class="contact__title">Thông Tin Của Chúng Tôi.</h2>
                     <p>D&D from AGU with Love ♥</p>
-                    <div class="wn__addres__wreapper">
+                    <div class="address_info">
                         <div class="single__address">
                             <img
                                 src="images/place_icon.svg"
@@ -135,7 +135,7 @@
                             />
                             <div class="content">
                                 <span>Địa Chỉ Mail:</span>
-                                <p>huynhthanhdat2506@gmail.com</p>
+                                <p>D&DBookStore@gmail.com</p>
                             </div>
                         </div>
 

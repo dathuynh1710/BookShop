@@ -11,31 +11,41 @@ body {
 
 .banner {
     width: 1200px;
-    height: 200px;
+    height: 353px;
+    object-fit: cover;
 }
 
 #PhanMenu1 {
     width: 760px;
-    height: 40px;
+    height: 50px;
     color: white;
     float: left;
-    background: #2e2100;
+    background: #2e2180;
 }
 
 #PhanMenu_2 {
     width: 440px;
-    height: 40px;
+    height: 50px;
     color: white;
     float: right;
-    background: #2e2100;
+    background: #2e2180;
 }
 a.menu {
     display: inline-block;
     text-decoration: none;
     text-align: center;
     color: white;
-    font-size: 16px;
-    margin: 10px 35px;
+    font-size: 20px;
+    margin: 12px 35px;
+}
+
+.search {
+    width: 50%;
+    height: 27px;
+}
+
+::placeholder {
+    padding-left: 10px;
 }
 
 a.menu:hover {
@@ -44,7 +54,7 @@ a.menu:hover {
 
 #PhanMenu_2 .search-btn {
     margin: 8px 0;
-    padding: 5px 10px;
+    padding: 8px 22px;
     border: none;
     background-color: #ff8c69;
     color: white;
@@ -63,12 +73,13 @@ a.menu:hover {
 }
 
 #BenTrai h3 {
+    height: 30px;
     text-align: center;
     font-size: 16px;
     padding: 2px 0 0 5px;
     margin-bottom: 0;
     margin-top: 1px;
-    background-color: #8b4202;
+    background-color: #3f3f3f;
     color: #ffffff;
 }
 
@@ -88,7 +99,7 @@ h3.xemthem {
     padding-left: 20px;
     padding-top: 5px;
     padding-bottom: 8px;
-    border: 1px solid #228b22;
+    border: 1px solid #aaa;
 }
 
 #BenTrai ul li a {
@@ -96,15 +107,14 @@ h3.xemthem {
     color: #0000ff;
 }
 
-#BenTrai ul li a:hover {
-    color: #ff0000;
+#BenTrai ul li:hover {
+    background-color: #555;
     font-weight: bold;
 }
 
-/* #BenTrai ul li a:visited {
-    text-decoration: none;
-    color: #0000ff;
-} */
+#BenTrai ul li a:hover {
+    color: white;
+}
 
 #Giua {
     width: 790px;
@@ -317,7 +327,7 @@ p.requirefields {
 
 #menudung li {
     width: auto;
-    height: 30px;
+    height: 40px;
     line-height: 40px;
     border-bottom: 1px solid #e8e8e8;
     padding: 0 1em;
@@ -335,6 +345,7 @@ p.requirefields {
 #menudung ul li {
     position: relative;
     font-size: 10pt;
+    background-color: #fff;
 }
 
 #menudung .sub-menu {
@@ -350,16 +361,6 @@ p.requirefields {
 
 a {
     text-decoration: none;
-}
-
-#wrapper {
-    width: 750px;
-    min-height: 96%;
-
-    height: 96%;
-    text-align: left;
-    margin: 0 auto -30px;
-    padding: 0 0px 0px 0px;
 }
 
 #bigPic {

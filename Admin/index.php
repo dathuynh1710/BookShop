@@ -67,10 +67,16 @@
 					?>
 					
 					
-					<h3>Chức năng khác</h3>
+					<h3>Trang chủ</h3>
 					<ul>
 						<li><a href="../TrangTin/index.php">Trang Chủ</a></li>
-						<li><a href="">.......</a></li>
+						
+					</ul>
+
+					<h3>Thống kê truy cập</h3>
+					<ul>
+						<li>Đang online: 3</li>
+						<li>Tổng lượt xem: 129</li>
 					</ul>
 					
 					

@@ -3,7 +3,7 @@
          .footer {
             height: 380px;
             padding: 10px 0; 
-            background: #2e2100;
+            background: #2E2180;
             color: #bfbcb2;
             clear: both;
         }

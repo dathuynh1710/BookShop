@@ -49,7 +49,7 @@
 		}
 		if($count_sp_tl > $_SESSION['limit'])
 		{
-			echo "<h3 class=\"xemthem\"><a href='index.php?do=sach_theloai&id_nsx=" . $row1['IDTheLoai'] . "&limit=ok'>Xem thêm các sản phẩm của <b>". $row1['TenTheLoai']."</b></a></h3></td>";
+			echo "<h3 class=\"xemthem\"><a href='index.php?do=sach_theloai&id_tl=" . $row1['IDTheLoai'] . "&limit=ok'>Xem thêm các sản phẩm của <b>". $row1['TenTheLoai']."</b></a></h3></td>";
 		
 		}
 ?>

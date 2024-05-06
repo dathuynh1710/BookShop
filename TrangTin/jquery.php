@@ -1,7 +1,16 @@
 <header>
 	<style>
-		.slider{
+		#wrapper {
 			width: 750px;
+			min-height: 96%;
+			height: 96%;
+			text-align: left;
+			margin: 0 auto -30px;
+			padding: 0 0px 0px 0px;
+		}
+
+		.slider{
+			width: 747px;
 			max-width: 100vw;
 			height: 300px;
 			margin: auto;
@@ -18,7 +27,7 @@
 			transition: 1s;
 		}
 		.slider .list img{
-			width: 700px;
+			width: 755px;
 			max-width: 100vw;
 			height: 100%;
 			object-fit: cover;
@@ -64,6 +73,8 @@
 		.slider .dots li.active{
 			width: 30px;
 		}
+
+		
 	</style>
 </header>
 <body>
@@ -71,20 +82,15 @@
 		<div class="slider">
 			<div class="list">
 				<div class="item">
-					<img src="images/qc7.jpg" alt="">
+					<img src="images/1.png" alt="">
 				</div>
 				<div class="item">
-					<img src="images/qc2.jpg" alt="">
+					<img src="images/2.png" alt="">
 				</div>
 				<div class="item">
-					<img src="images/qc3.jpg" alt="">
+					<img src="images/3.png" alt="">
 				</div>
-				<div class="item">
-					<img src="images/qc5.jpg" alt="">
-				</div>
-				<div class="item">
-					<img src="images/qc6.jpg" alt="">
-				</div>
+				
 			</div>
 			<div class="buttons">
 				<button id="prev"><</button>

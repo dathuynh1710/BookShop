@@ -51,27 +51,27 @@
 	<body >
 		<div id="TrangWeb">
 			<div id="PhanDau">
-				<img src="images/banner_book.jpg" alt="" class="banner">
+				<img src="images/banner.jpg" alt="" class="banner">
 			</div>
 			<div id="PhanMenu1">
-				<a class = "menu" href="index.php?do=home">Trang chủ</a>  
-				<a class = "menu" href="../admin/index.php">Đăng nhập</a>  
-				<a class = "menu" href="index.php?do=sach">Sách</a>  
-				<a class = "menu" href="index.php?do=contact">Liên hệ</a>  
+				<a class = "menu" href="index.php?do=home">Home</a>  
+				<a class = "menu" href="../admin/index.php">Admin</a>  
+				<a class = "menu" href="index.php?do=sach">Book Shop</a>  
+				<a class = "menu" href="index.php?do=contact">Contact</a>  
 			</div>
 
 			<div id="PhanMenu_2">
 				<form action="index.php?do=search_xuly" method="post" autocomplete="off">
-					Tìm kiếm: <input type="text" name="search" />
+					 <input class="search" type="text" name="search" placeholder ="Nhập nội dung cần tìm..."/>
 					<input class="search-btn" type="submit" name="ok" value="Search" />
 				</form>
 			</div>
 
 			<div id="PhanGiua">
 				<div id="BenTrai">
+				
 				<h3>Thể loại</h3>
 					<?php
-
 						$sql = "select * from `theloai` WHERE 1";
 						$danhsach = $connect->query($sql);
 						//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
@@ -92,28 +92,7 @@
 						
 					</div>	
 					
-				<h3>Tác giả</h3>
-					<?php
-
-						$sql = "select * from `tacgia` WHERE 1";
-						$danhsach = $connect->query($sql);
-						//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
-						if (!$danhsach) {
-							die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
-							exit();
-						}
-					?>
-					<div id="menudung">
-					  <ul>						
-							<?php
-								while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 
-								{
-    								echo "<li><a href='index.php?do=sanpham_chitiet&id_tg=" . $row['IDTacGia'] . "'>" . $row['TenTacGia'] . "</a></li>";   
-  								}
-							?>  
-					   </ul>
-						
-					</div>	
+				
 				<div>	
 						<iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:200px;height:180px;margin-top:20px;"src="https://www.clocklink.com/html5embed.php?clock=042&timezone=VietNam_HoChiMinhCity&color=purple&size=356&Title=&Message=&Target=&From=2024,1,1,0,0,0&Color=purple"></iframe>
 				</div>

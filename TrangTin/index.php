@@ -55,8 +55,7 @@
 			</div>
 			<div id="PhanMenu1">
 				<a class = "menu" href="index.php?do=home">Home</a>  
-				<a class = "menu" href="../admin/index.php">Admin</a>  
-				<a class = "menu" href="index.php?do=sach">Book Shop</a>  
+				<a class = "menu" href="../admin/index.php">Admin</a>   
 				<a class = "menu" href="index.php?do=contact">Contact</a>  
 			</div>
 
@@ -148,14 +147,14 @@
 				</div>
 
 				<div id="BenPhai" >
-					<marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="down" scrollamount=7 loop="infinite" height="500px">
-						<img src="images/qc1.jpg" width="200px" height="100px" margin="0 10px"/>
-						<img src="images/qc2.jpg" width="200px" height="100px" margin="0 10px"/>
-						<img src="images/qc3.jpg" width="200px" height="100px" margin="0 10px"/>
-						<img src="images/qc4.png" width="200px" height="100px" margin="0 10px"/>
-						<img src="images/qc5.jpg" width="200px" height="100px" margin="0 10px"/>
-						<img src="images/qc6.jpg" width="200px" height="100px" margin="0 10px"/>
-						<img src="images/qc7.jpg" width="200px" height="100px" margin="0 10px"/>
+					<marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="down" scrollamount="3" loop="infinite" height="700px">
+						<img src="images/qc1.jpg" width="200px" height="200px" margin="0 10px"/>
+						<img src="images/qc2.jpg" width="200px" height="200px" margin="0 10px"/>
+						<img src="images/qc3.jpg" width="200px" height="200px" margin="0 10px"/>
+						<img src="images/qc4.png" width="200px" height="200px" margin="0 10px"/>
+						<img src="images/qc5.jpg" width="200px" height="200px" margin="0 10px"/>
+						<img src="images/qc6.jpg" width="200px" height="200px" margin="0 10px"/>
+						<img src="images/qc7.jpg" width="200px" height="200px" margin="0 10px"/>
 					</marquee>
 				</div>
 				

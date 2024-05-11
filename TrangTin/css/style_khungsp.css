@@ -21,7 +21,7 @@
 }
 
 .xemthem a:hover {
-    background: #ffefd5;
+    background: #c9d2ce;
 }
 
 .inner {
@@ -39,4 +39,9 @@
     display: block;
     text-align: center;
     color: #363636;
+    font-size: 17px;
+}
+
+.name-book:hover {
+    color: #fba2d0;
 }

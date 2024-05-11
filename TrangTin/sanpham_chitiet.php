@@ -54,7 +54,6 @@
 				<a class="tocart" title="Add to Cart" href="dangnhap.php" onclick="return confirm('Bạn có muốn thêm sản phẩm <?=htmlspecialchars($dong['TenSach'], ENT_QUOTES)?> vào giỏ hàng không?')">Thêm Vào Giỏ Hàng</a>
 			</div>
 		</td>
-		
 	</tr>
 	
 </table>

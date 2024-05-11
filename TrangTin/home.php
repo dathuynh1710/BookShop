@@ -5,8 +5,6 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/style_khungsp.css" />
 	</head>
-	
-
 <?php
 	if(isset($_GET["limit_home"]) == true)
 		{

@@ -44,10 +44,6 @@ a.menu {
     height: 27px;
 }
 
-::placeholder {
-    padding-left: 10px;
-}
-
 a.menu:hover {
     color: #ff8c69;
 }
@@ -160,7 +156,7 @@ h3.xemthem {
     font-family: Tahoma;
     margin-top: 8px;
     margin-bottom: 0;
-    text-shadow: 2px 2px 3px #00ff00;
+    text-shadow: 2px 2px 3px #e59285;
 }
 
 .title-giua {
@@ -413,20 +409,19 @@ ul#thumbs img {
 
 .card {
     width: 234px;
-    height: 200px;
     margin: 8px;
     padding: auto;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    /* transition: transform 0.3s; */
     text-align: center;
     float: left;
 }
 
 .card:hover {
-    background: #fffaf0;
+    background: #c6dfef;
     cursor: pointer;
+    transition: background-color 0.7s ease;
 }
 
 .card-link {

@@ -30,15 +30,29 @@
 	}
 ?>
 <h3>Danh sách sản phẩm</h3>
-<div class="container">
-    <div class="row mb-3">
-      <div class="col-3">
-        <a href="index.php?do=sanpham_them"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#userModal" id="addnewbtn" >Thêm SP <i
-            class="fa fa-cart-plus"></i></button></a>
-      </div>
-      
-    </div></div>
-	
+ <div class="container">
+  <div class="row mb-3">
+    <div class="col-3">
+      <a href="index.php?do=sanpham_them"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#userModal" id="addnewbtn">Thêm SP <i class="fa fa-cart-plus"></i></button></a>
+    </div>
+    <div class="col-9">
+      <form action="index.php?do=search_xuly" method="post" autocomplete="off">
+        <div class="col-9">
+          <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+            </div>
+            <input class="search" type="text" class="form-control" name="search" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Nhập tên sách..." id="searchinput">
+            <span class="input-group-text" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
+
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
 	<table class="table" id="userstable">
 	<thead>
 	<tr>

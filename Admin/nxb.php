@@ -7,15 +7,17 @@
 		exit();
 	}
 ?>
-<h3>Danh sách NXB</h3>
-<table class="DanhSach">
-	<tr>
-		<th >ID nhà xuất bản</th>
-		<th >Tên nhà xuất bản</th>
+<h3>Danh sách Nhà Xuất Bản</h3>
+<table class="table table-hover text-center">
+<thead class="table-dark">
+<tr>
+		<th >ID NXB</th>
+		<th >Tên NXB</th>
 		<th >Số ĐT</th>
 		<th >Địa chỉ</th>
 		<th  colspan="2">Hành động</th>
 	</tr>
+	</thead>
 	<?php
 		while ($dong = $danhsach->fetch_array(MYSQLI_ASSOC)) {		
 			echo "<tr  bgcolor='#ffffff' onmouseover='this.style.background=\"#dee3e7\"' onmouseout='this.style.background=\"#ffffff\"'>";
@@ -24,12 +26,13 @@
 				echo "<td>" . $dong["SoDT"] . "</td>";
 				echo "<td>" . $dong["DiaChi"] . "</td>";
 
-				echo "<td align='center'><a href='index.php?do=nxb_sua&id=" . $dong["IDNhaXuatBan"] . "'><img src='images/edit.png' /></a></td>";
-				echo "<td align='center'><a href='index.php?do=nxb_xoa&id=" . $dong["IDNhaXuatBan"] . "' onclick='return confirm(\"Bạn có muốn xóa NXB " . $dong['TenNhaXuatBan'] . " không?\")'><img src='images/delete.png' /></a></td>";
+				echo "<td align='center'><a href='index.php?do=nxb_sua&id=" . $dong["IDNhaXuatBan"] . "' class='link-dark'><i class='fa-solid fa-pen-to-square fs-5 me-3'></i></a></td>";
+				echo "<td align='center'><a href='index.php?do=nxb_xoa&id=" . $dong["IDNhaXuatBan"] . "' class='link-dark' onclick='return confirm(\"Bạn có muốn xóa NXB " . $dong['TenNhaXuatBan'] . " không?\")'><i class='fa-solid fa-trash fs-5'></i></a></td>";
+
 			echo "</tr>";
 		}
 	?>
 </table>
-	
-<a href="index.php?do=nxb_them">Thêm mới nhà xuất bản</a>
+	<a  href="index.php?do=nxb_them" class="btn btn-dark mb-3">Thêm nhà xuất bản</a>
+
 </form>

@@ -4,17 +4,22 @@
 		<input type="hidden" value="<?php echo $_SESSION['MaND']; ?>" name="MaNguoiDung" />
 		<tr>
 			<td>Mật khẩu cũ:</td>
-			<td><input type="password" name="MatKhauCu" /></td>
+			<td><input type="password" class="form-control" name="MatKhauCu" ></td>
+
 		</tr>
 		<tr>
 			<td>Mật khẩu mới:</td>
-			<td><input type="password" name="MatKhauMoi" /></td>
+			<td><input type="password" class="form-control" name="MatKhauMoi" ></td>
+
 		</tr>
 		<tr>
 			<td>Xác nhận mật khẩu mới:</td>
-			<td><input type="password" name="XacNhanMatKhauMoi" /></td>
+			<td><input type="password" class="form-control" name="XacNhanMatKhauMoi" ></td>
+
 		</tr>
 	</table>
 	
-	<input type="submit" value="Cập nhật mật khẩu" />
+	<button type="submit" class="btn btn-primary">Cập nhật mật khẩu</button>
+	
+
 </form>

@@ -16,24 +16,27 @@
 		<input type="hidden" value="<?php echo $dong['MaNguoiDung']; ?>" name="MaNguoiDung" />
 		<tr>
 			<td>Họ và tên:</td>
-			<td><input type="text" value="<?php echo $dong['TenNguoiDung']; ?>" name="HoVaTen" /></td>
+			<td><input type="text" class="form-control" value="<?php echo $dong['TenNguoiDung']; ?>" name="HoVaTen" /></td>
+			
+
 		</tr>
 		<tr>
 			<td>Tên đăng nhập:</td>
-			<td><input type="text" value="<?php echo $dong['TenDangNhap']; ?>" name="TenDangNhap" disabled="disabled" /></td>
+			<td><input type="text" class="form-control" value="<?php echo $dong['TenDangNhap']; ?>" name="TenDangNhap" disabled="disabled" /></td>
 		</tr>
 		<tr>
 			<td>Địa chỉ:</td>
-			<td>	<input type="text" value="<?php echo $dong['DiaChi']; ?>" name="DiaChi" placeholder="Địa chỉ"/>
+			<td>	<input type="text" class="form-control" value="<?php echo $dong['DiaChi']; ?>" name="DiaChi" placeholder="Địa chỉ"/>
 </td>
 		</tr>
 		<tr>
 			<td>Số điện thoại:</td>
-			<td>	<input type="text" value="<?php echo $dong['SDT']; ?>" name="SDT" placeholder="Địa chỉ"/>
+			<td>	<input type="text" class="form-control" value="<?php echo $dong['SDT']; ?>" name="SDT" placeholder="Địa chỉ"/>
 </td>
 		</tr>
 
 	</table>
 	
-	<input type="submit" value="Cập nhật hồ sơ" />
+	<button type="submit" class="btn btn-primary">Cập nhật hồ sơ</button>
+
 </form>

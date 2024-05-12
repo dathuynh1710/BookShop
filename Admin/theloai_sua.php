@@ -20,5 +20,8 @@
 		</tr>
 	</table>
 	
-	<input type="submit" value="Cập nhật" />
+	<div class="cta" style='margin-top: 10px;'>	
+		<button type="submit" class="btn btn-success" name="submit">Update</button>
+        <a href="index.php?do=theloai" class="btn btn-danger">Cancel</a>
+	</div>
 </form>

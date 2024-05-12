@@ -22,6 +22,9 @@
 			<td><input type="text" name="TenDangNhap" value="<?php echo $dong['TenDangNhap']; ?>" /></td>
 		</tr>
 	</table>
-	<input type="submit" value="Cập nhật" />
+	<div class="cta" style='margin-top: 10px;'>
+		<button type="submit" class="btn btn-success" name="submit">Update</button>
+        <a href="index.php?do=nguoidung" class="btn btn-danger">Cancel</a>
+	</div>
 </form>
 

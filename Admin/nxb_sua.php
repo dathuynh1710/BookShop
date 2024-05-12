@@ -27,6 +27,8 @@
 			<td><input type="text" name="DiaChi" value="<?php echo $dong['DiaChi']; ?>" /></td>
 		</tr>
 	</table>
-	
-	<input type="submit" value="Cập nhật" />
+	<div class="cta" style='margin-top: 10px;'>	
+		<button type="submit" class="btn btn-success" name="submit">Update</button>
+        <a href="index.php?do=nxb" class="btn btn-danger">Cancel</a>
+	</div>
 </form>

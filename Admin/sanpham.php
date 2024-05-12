@@ -30,34 +30,40 @@
 	}
 ?>
 <h3>Danh sách sản phẩm</h3>
-<table class="DanhSach">
+<div class="container">
+    <div class="row mb-3">
+      <div class="col-3">
+        <a href="index.php?do=sanpham_them"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#userModal" id="addnewbtn" >Thêm SP <i
+            class="fa fa-cart-plus"></i></button></a>
+      </div>
+      
+    </div></div>
+	
+	<table class="table" id="userstable">
+	<thead>
 	<tr>
 		<th>STT</th>
-		<th >Tên Sách</th>
-		
-		
-		
-		<th >Giá(VNĐ)</th>
-		<th >Số lượng</th>
-	
 		<th >Hình Ảnh</th>
-		<th  colspan="2">Hành động</th>
+		<th >Tên Sách</th>
+		<th >Giá(VNĐ)</th>
+		<th width=20%>Số lượng</th>
+		<th  colspan="2">Action</th>
 	</tr>
+	</thead>
 	<?php
 		$stt = 1;
 		while ($dong = $danhsach->fetch_array(MYSQLI_ASSOC)) {	
 			echo "<tr>";
 				echo "<td>" . $stt . "</td>";
+				echo "<td><img src='".$dong['HinhAnh']."' width='100'/></td>";
 				echo "<td > " . $dong["TenSach"] . "</td>";
 				echo "<td>" . number_format($dong["DonGia"], 0, '.', '.') . "</td>";
-				echo "<td >" . $dong["SoLuong"] . "</td>";	
-				echo "<td><img src='".$dong['HinhAnh']."' width='100'/></td>";
-				echo "<td align='center'><a href='index.php?do=sanpham_sua&id=" . $dong['IDSach'] . "'><img src='images/edit.png' /></a></td>";
-				echo "<td align='center'><a href='index.php?do=sanpham_xoa&id=" . $dong['IDSach'] . "' onclick='return confirm(\"Bạn có muốn xóa sách " . $dong['TenSach'] . " không?\")'><img src='images/delete.png' /></a></td>";
-			echo "</tr>";
+				echo "<td >" . $dong["SoLuong"] . "</td>";					
+				echo "<td align='center'><a href='index.php?do=sanpham_sua&id=" . $dong["IDSach"] . "' class='link-dark'><i class='fa-solid fa-pen-to-square fs-5 me-3'></i></a></td>";
+				echo "<td align='center'><a href='index.php?do=sanpham_xoa&id=" . $dong["IDSach"] . "' class='link-dark' onclick='return confirm(\"Bạn có muốn xóa sách " . $dong['TenSach'] . " không?\")'><i class='fa-solid fa-trash fs-5'></i></a></td>";
+
+				echo "</tr>";
 			$stt++;
 		}
 	?>
 </table>
-
-<a href="index.php?do=sanpham_them">Thêm sản phẩm</a>

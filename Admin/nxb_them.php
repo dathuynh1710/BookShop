@@ -14,6 +14,9 @@
 			<td><input type="text" name="DiaChi" /></td>
 		</tr>
 	</table>
-	
-	<input type="submit" value="Thêm" />
+
+	<div class="cta" style='margin-top: 10px;'>	
+		<button type="submit" class="btn btn-success" name="submit">Thêm</button>
+        <a href="index.php?do=nxb" class="btn btn-danger">Cancel</a>
+	</div>
 </form>
